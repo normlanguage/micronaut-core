@@ -2,4 +2,6 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-`micronaut.core@1` 绑定 Micronaut Core 5.1.13 的常用编译期 Annotation。可运行示例位于 `micronaut/core/Main.norm`。
+`micronaut.core@3` 绑定 Micronaut Core 5.1.13 的常用编译期 Annotation。可运行示例位于 `micronaut/core/Main.norm`。
+
+[示例归属](samples/README.zh-CN.md)。
