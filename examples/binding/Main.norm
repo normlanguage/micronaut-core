@@ -1,0 +1,15 @@
+package binding
+
+import micronaut.core.annotation.Introspected
+
+@Introspected()
+class Message {
+  String value
+}
+
+Void main() {
+  var message = Message(value: "Micronaut core")
+  require(condition: Message.class.annotation<Introspected>() != null, message: "Introspected binding is missing")
+  require(condition: message.value == "Micronaut core", message: "Message value changed")
+  printLine(message.value)
+}
