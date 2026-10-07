@@ -1,7 +1,9 @@
 Module module() {
   return module(
     name: "micronaut.core",
-    version: 4,
+    version: 5,
+    exports: ["annotation.Introspected", "annotation.IntrospectedAccessKind", "annotation.Nullable", "annotation.ReflectiveAccess"],
+    dependencies: [dependency(repository: "norm", name: "java.base", version: 1)],
     binding: jarBinding(
       target: mavenJar(
         group: "io.micronaut",
@@ -10,10 +12,10 @@ Module module() {
         resolution: sha256("89c939e92fe69f6aa443da8b36bd34ff2e93d44a061a3d9e0068ead672213d8c")
       ),
       api: [
-        jarType(name: "annotation.Introspected", members: ["accessKind", "annotationMetadata"]),
-        jarType(name: "annotation.Introspected.AccessKind", members: []),
-        jarType(name: "annotation.Nullable", members: ["inherited"]),
-        jarType(name: "annotation.ReflectiveAccess", members: [])
+        jarType(name: "io.micronaut.core.annotation.Introspected", alias: "annotation.Introspected", members: ["accessKind", "annotationMetadata"]),
+        jarType(name: "io.micronaut.core.annotation.Introspected.AccessKind", alias: "annotation.IntrospectedAccessKind", members: []),
+        jarType(name: "io.micronaut.core.annotation.Nullable", alias: "annotation.Nullable", members: ["inherited"]),
+        jarType(name: "io.micronaut.core.annotation.ReflectiveAccess", alias: "annotation.ReflectiveAccess", members: [])
       ]
     )
   )
