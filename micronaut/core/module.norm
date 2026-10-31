@@ -1,7 +1,7 @@
 Module module() {
   return module(
     name: "micronaut.core",
-    version: 6,
+    version: 7,
     exports: ["annotation.Introspected", "annotation.IntrospectedAccessKind", "annotation.Nullable", "annotation.ReflectiveAccess"],
     dependencies: [dependency(repository: "norm", name: "java.base", version: 1)],
     binding: jarBinding(
